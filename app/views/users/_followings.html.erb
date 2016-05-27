@@ -1,0 +1,7 @@
+
+  <% @users.each do |f| %>
+    <li>
+      <span class="gravatar"><%= link_to gravatar_for(f, size:50) %></span>
+      <span class="user"><%= link_to f.name, user_path(f) %></span>
+    </li>
+  <% end %>

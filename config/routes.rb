@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   get    'setting', to: 'sessions#edit'
   put    'setting', to: 'sessions#update'
   
-  resources :users
+  resources :users do
+    member do
+      get :followings, :followers
+    end
+  end
+ 
   resources :sessions , only: [:new, :create, :destroy]
   resources :microposts
   resources :relationships, only: [:create, :destroy]
