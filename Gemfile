@@ -31,6 +31,13 @@ gem 'bootstrap-sass'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+
+gem 'faker'
+gem 'kaminari'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

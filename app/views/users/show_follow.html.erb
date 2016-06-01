@@ -1,5 +1,3 @@
-<h1></h1>
-
 <div class="row">
   <aside class="col-md-4">
     <%= render 'side' %>
@@ -8,9 +6,11 @@
     <% if logged_in? %>
       <% if @users.any? %>
         <h3> <%= @title %> (<%= @users.count %>)</h3>
+        <%= page_entries_info @users %>
         <ol class="follows">
           <%= render 'followings' %>         
         </ol>
+        <%= paginate @users %>
       <% end %>
     <% end %>
   </div>
